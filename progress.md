@@ -6,8 +6,9 @@
 - Home, quiz, feedback and result screens are implemented.
 - All three scenarios have three questions and four options each.
 - Content is in `content/quiz-content.json` and validated on load.
-- Local preview is running at **http://127.0.0.1:4174**.
-- Not pushed, not deployed and no proposal written. Waiting for the user's review and repository URL.
+- Live at **https://weather-quiz-022114083833448235831.vercel.app**.
+- Pushed to **https://github.com/francisco-arturo/weather-quiz-022114083833448235831**.
+- Proposal is the remaining step, drafted after the live URL and repository were confirmed.
 
 ## Current Objective
 
@@ -16,7 +17,7 @@ A small, working, mobile-friendly educational quiz about flooding, heatwaves and
 ## Last Updated
 
 - **Last Updated**: 2026-10-24
-- **Recommended Next Step**: open the local preview, walk the 60-second path in `DEMO.md`, then approve or request changes.
+- **Recommended Next Step**: write and submit the Upwork proposal against the verified live URL, then log the sent proposal in the tracker.
 
 ## What Ran
 
@@ -29,8 +30,10 @@ A small, working, mobile-friendly educational quiz about flooding, heatwaves and
 | `node tests/quiz-core.test.mjs` | 8 tests passed, 0 failed |
 | `Invoke-WebRequest` against local server on port 4174 | 200 for `/`, `/styles.css`, `/app.mjs`, `/quiz-core.mjs`, `/content/quiz-content.json`, `/favicon.svg`; content types correct |
 | `node .harness/gate.mjs` (workspace root) | PASS. Workspace gate green; this prototype 100/100; 62 prototypes verified |
-| `git commit` | Local commit `fadc1de` on `main`; working tree clean |
-| headless Chrome/Edge screenshot attempt | No screenshot. Browser launch blocked by the agent sandbox with crashpad `OpenProcess: Access denied`; treated as optional QA, not a product defect |
+| `git push -u origin main` | Pushed `main` to https://github.com/francisco-arturo/weather-quiz-022114083833448235831 |
+| `node .harness/deploy.mjs weather-quiz-022114083833448235831` | READY in 5s. Live: https://weather-quiz-022114083833448235831.vercel.app |
+| Node `fetch` against the live URL | 200 for `/`, `/content/quiz-content.json`, `/app.mjs`, `/styles.css`, `/favicon.svg`; content types correct |
+| `git commit` | Local commit `39f85eb` on `main`; working tree clean before delivery docs |
 
 ## Verification Evidence
 

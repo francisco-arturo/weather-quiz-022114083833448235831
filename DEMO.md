@@ -2,19 +2,27 @@
 
 ## Status
 
-- **Live URL:** not deployed yet. The local build is waiting for the user's review and repository URL.
-- **Local preview:** **http://127.0.0.1:4174**
-- **Start command:** `$env:PORT = 4174; node dev-server.mjs` (from this directory)
-- **Default command:** `node dev-server.mjs` → `http://127.0.0.1:4173`
+- **Live URL:** **https://weather-quiz-022114083833448235831.vercel.app**
+- **Repository:** https://github.com/francisco-arturo/weather-quiz-022114083833448235831
+- **Local fallback:** `node dev-server.mjs` → http://127.0.0.1:4173
 - **Last verified:** 2026-10-24
+- **Vercel deployment:** `dpl_9ZXkGdrMi3now6bLrPcKs3VrP5SG`, status READY
 
-Port 4174 is used for the review because another process already holds 4173 on this machine. The app itself defaults to 4173.
+The live route was checked with Node fetch after deployment:
+
+| Route | Result |
+|---|---|
+| `/` | 200, `text/html` |
+| `/content/quiz-content.json` | 200, `application/json` |
+| `/app.mjs` | 200, `application/javascript` |
+| `/styles.css` | 200, `text/css` |
+| `/favicon.svg` | 200, `image/svg+xml` |
 
 ## The 60-second path
 
 | # | Do this | The visitor should see |
 |---|---|---|
-| 1 | Open http://127.0.0.1:4174/ | The home page with the dark hazard briefing card and three scenario cards (Flooding, Heatwaves, Severe thunderstorms). |
+| 1 | Open the live URL | The home page with the dark hazard briefing card and three scenario cards (Flooding, Heatwaves, Severe thunderstorms). |
 | 2 | Click **Start with flooding** | The flooding scenario, with the situation on the left and the first decision on the right. |
 | 3 | Choose **Move to higher ground and away from the water**, then **Check answer** | A green “Correct” feedback panel with the explanation, FOEN/FOCP links and an updated score. |
 | 4 | Continue through the other two flooding questions | Feedback after each answer, including the safer answer when a choice is wrong. |
@@ -33,18 +41,17 @@ A complete, mobile-first learning loop: scenario selection, one decision at a ti
 - Scores live in browser memory only. Reloading the page starts again; there is no account, database or results history.
 - Official guidance is **linked**, not embedded or mirrored.
 - The local Node server is for development only and is excluded from the deployment.
-- The headless browser screenshot step was blocked by the agent sandbox (crashpad `OpenProcess` denial), so the handover relies on route checks, content tests and a source review. A human browser walkthrough is the next review step.
+- The headless browser screenshot step was blocked by the agent sandbox (crashpad `OpenProcess` denial), so visual QA relies on the source and a human browser walkthrough.
 
 ## If something fails while they look
 
-- If the page says the content could not be loaded, make sure it is open through `node dev-server.mjs`, not as a `file://` path.
-- If the port is wrong, check the terminal line printed by the server.
-- If the browser has an old module cached, hard-refresh with Ctrl+F5.
+- If the page says the content could not be loaded, check that `/content/quiz-content.json` returns 200 on the live URL.
+- Hard-refresh with Ctrl+F5 if the browser has an old module cached.
+- Redeploy with `node .harness/deploy.mjs weather-quiz-022114083833448235831` from the workspace root.
 - Rerun verification with `powershell -ExecutionPolicy Bypass -File .\init.ps1`.
 
 ## Not built (next, if the user wants it)
 
-- The remaining client-authored English content and exact official guidance links from the brief.
+- The client-authored English content and exact official guidance links from the brief.
 - A short checklist for reviewing and replacing content before each semester.
 - Optional teacher-facing summary or printable score sheet, only if separately agreed.
-- Deployment after approval, then the proposal.

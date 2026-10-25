@@ -2,7 +2,7 @@
 
 ## Last Updated
 
-- 2026-10-24 — full prototype built, verified and running locally for review.
+- 2026-10-24 — full prototype built, verified, pushed and deployed. Live at https://weather-quiz-022114083833448235831.vercel.app. Proposal is the remaining step.
 
 ## Current Objective
 
@@ -10,17 +10,18 @@ A mobile-friendly educational quiz about extreme weather safety in Switzerland: 
 
 ## Recommended Next Step
 
-1. Open **http://127.0.0.1:4174** and walk the path in `DEMO.md`.
-2. Review the content in `content/quiz-content.json` against the final English copy the client will supply.
-3. If the user approves, follow the workspace workstream: commit, confirm the GitHub repository URL, push, deploy with `node .harness/deploy.mjs weather-quiz-022114083833448235831`, then write the proposal.
+1. Draft the Upwork proposal against the live URL and repository, following `upwork-kit/PLAYBOOK.md`.
+2. Run the pre-submit checklist, count the characters, and scan for em dashes before sending.
+3. Log the sent proposal in `upwork-kit/TRACKER.csv` with the hook type used.
 
 ## State
 
 - All three scenarios implemented.
 - `feature_list.json` marks `proto-001` done with verification evidence.
-- Local server is a managed background job on port 4174. Port 4173 was occupied by another process.
-- Verification is green: 8/8 tests, content check passed, six local routes returned HTTP 200.
-- No push, no deploy, no proposal.
+- Live URL: https://weather-quiz-022114083833448235831.vercel.app
+- Repository: https://github.com/francisco-arturo/weather-quiz-022114083833448235831
+- Verification is green: 8/8 tests, content check passed, five live routes returned HTTP 200.
+- Proposal is not yet written or sent.
 
 ## Files
 

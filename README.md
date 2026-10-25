@@ -4,6 +4,10 @@ A small educational quiz about extreme weather safety in Switzerland, built for 
 
 The prototype is a static web app. There is no build step, no account, no database and no live weather data.
 
+**Live demo:** https://weather-quiz-022114083833448235831.vercel.app
+
+**Repository:** https://github.com/francisco-arturo/weather-quiz-022114083833448235831
+
 ## Quick start
 
 Requirements: **Node.js 18 or newer** for the local server. Nothing to install.
