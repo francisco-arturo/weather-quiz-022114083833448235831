@@ -1,0 +1,7 @@
+.preview/
+dev-server.mjs
+scripts/
+tests/
+*.md
+.gitignore
+.vercelignore

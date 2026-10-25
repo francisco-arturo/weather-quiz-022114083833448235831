@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3efe6" />
+    <title>Weatherwise — Extreme weather safety quiz for Switzerland</title>
+    <meta
+      name="description"
+      content="A short, practical quiz for students in Switzerland. Practise what to do in flooding, heatwaves and severe thunderstorms."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <button class="brand" id="brand-home" type="button" aria-label="Weatherwise home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 40 40" role="presentation">
+                <path d="M11 25.5h17.5a5.5 5.5 0 0 0 .8-10.9A9.2 9.2 0 0 0 12.2 17 4.3 4.3 0 0 0 11 25.5Z" />
+                <path class="brand-bolt" d="m21 22-4.5 6h3.7L18.8 34l6.2-7.8h-3.9l1.8-4.2Z" />
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-name">Weatherwise</span>
+              <span class="brand-place">Switzerland</span>
+            </span>
+          </button>
+
+          <nav class="header-nav" aria-label="Primary navigation">
+            <button class="nav-link" id="about-button" type="button">About &amp; sources</button>
+            <span class="emergency-chip">
+              <span class="emergency-dot" aria-hidden="true"></span>
+              Emergency <strong>112</strong>
+            </span>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="screen" id="screen-home" aria-labelledby="home-title">
+          <div class="hero">
+            <div class="hero-copy">
+              <p class="eyebrow">
+                <span class="signal-dot" aria-hidden="true"></span>
+                Severe weather, Switzerland
+              </p>
+              <h1 id="home-title" tabindex="-1">
+                When the weather turns,
+                <span class="headline-accent">know your next move.</span>
+              </h1>
+              <p class="hero-lede">
+                Three weather emergencies. Nine quick decisions. A practical quiz for students in
+                Switzerland, built around official federal guidance.
+              </p>
+              <div class="hero-actions">
+                <button class="button button--primary" id="start-flooding" type="button">
+                  Start with flooding
+                  <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M4 10h11M11 5l5 5-5 5" />
+                  </svg>
+                </button>
+                <a class="button button--ghost" href="#scenarios">See all three scenarios</a>
+              </div>
+              <dl class="hero-stats" aria-label="Quiz details">
+                <div>
+                  <dt>9</dt>
+                  <dd>real-life decisions</dd>
+                </div>
+                <div>
+                  <dt>5 min</dt>
+                  <dd>to finish all three</dd>
+                </div>
+                <div>
+                  <dt>0</dt>
+                  <dd>accounts needed</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+              <div class="briefing-card">
+                <div class="briefing-top">
+                  <span class="briefing-label">
+                    <span class="pulse-dot"></span>
+                    Hazard briefing
+                  </span>
+                  <span class="briefing-mode">Learning mode</span>
+                </div>
+
+                <div class="briefing-map">
+                  <svg viewBox="0 0 440 280" preserveAspectRatio="none" role="presentation">
+                    <path d="M-20 245c66-23 98-89 88-146C58 45 93 11 156 8c73-4 88 48 135 62 52 16 107-9 169 21" />
+                    <path d="M-10 270c79-31 121-97 108-163C84 53 113 27 171 25c65-3 92 49 137 61 49 13 92-6 152 20" />
+                    <path d="M8 295c84-30 143-94 128-170C125 68 146 44 187 44c61 0 93 55 133 65 44 11 78-3 132 22" />
+                    <path d="M-30 208c65-14 80-71 68-112C25 55 52 28 101 20c57-9 91 34 132 45 53 14 108-15 166 18" />
+                    <path d="M33 305c58-41 107-105 96-173C119 82 140 57 182 55c51-2 81 42 120 55 52 17 94 3 148 35" />
+                    <path d="M-27 183c46-15 59-57 52-91C14 50 31 26 69 14c47-15 76 16 108 28 49 18 96 5 142 30" />
+                  </svg>
+                  <span class="map-grid"></span>
+                  <span class="map-marker">
+                    <span class="map-marker-core"></span>
+                    <span class="map-marker-label">CH</span>
+                  </span>
+                  <span class="map-coordinates">46.8182° N / 8.2275° E</span>
+                  <span class="map-scale">0&nbsp;&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;100 km</span>
+                </div>
+
+                <div class="briefing-list">
+                  <div class="briefing-row">
+                    <span class="mini-icon mini-icon--flood">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 9c2.4 0 2.4 2 4.8 2s2.4-2 4.8-2 2.4 2 4.8 2 2.4-2 3.6-2M3 15c2.4 0 2.4 2 4.8 2s2.4-2 4.8-2 2.4 2 4.8 2 2.4-2 3.6-2" />
+                      </svg>
+                    </span>
+                    <span class="briefing-row-copy"><strong>Flooding</strong><small>Rising water</small></span>
+                    <span class="briefing-row-number">01</span>
+                  </div>
+                  <div class="briefing-row">
+                    <span class="mini-icon mini-icon--heat">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1" />
+                      </svg>
+                    </span>
+                    <span class="briefing-row-copy"><strong>Heatwave</strong><small>Hot days</small></span>
+                    <span class="briefing-row-number">02</span>
+                  </div>
+                  <div class="briefing-row">
+                    <span class="mini-icon mini-icon--storm">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 16.5h12a3.8 3.8 0 0 0 .6-7.5A6.3 6.3 0 0 0 6.8 10 3 3 0 0 0 6 16.5Z" />
+                        <path d="m13 15-3 4h2.4L11 23l4-5h-2.5l.5-3Z" />
+                      </svg>
+                    </span>
+                    <span class="briefing-row-copy"><strong>Thunderstorm</strong><small>Lightning &amp; hail</small></span>
+                    <span class="briefing-row-number">03</span>
+                  </div>
+                </div>
+
+                <p class="briefing-quote">
+                  “The safest decision is usually the boring one: move away, cool down, go inside.”
+                </p>
+              </div>
+              <span class="visual-tag">Not live alerts · Practice mode</span>
+            </div>
+          </div>
+
+          <section class="scenario-section" id="scenarios" aria-labelledby="scenario-heading">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Pick a scenario</p>
+                <h2 id="scenario-heading">Practise the moment that matters.</h2>
+              </div>
+              <p class="section-note">
+                Each scenario takes about two minutes. Choose an answer, read the feedback, then
+                see how you did.
+              </p>
+            </div>
+
+            <div class="scenario-grid" id="scenario-grid" aria-live="polite">
+              <p class="loading-note">Loading scenarios…</p>
+            </div>
+          </section>
+
+          <section class="method-section" aria-labelledby="method-heading">
+            <div class="method-intro">
+              <p class="eyebrow">How it works</p>
+              <h2 id="method-heading">Small decisions. Clear reasons.</h2>
+            </div>
+            <div class="method-grid">
+              <article class="method-card">
+                <span class="method-number">01</span>
+                <h3>Read the situation</h3>
+                <p>Each scenario starts with a real-life setting, not a list of facts to memorise.</p>
+              </article>
+              <article class="method-card">
+                <span class="method-number">02</span>
+                <h3>Choose the safer move</h3>
+                <p>Pick one answer. The feedback explains why it is safer and what to avoid.</p>
+              </article>
+              <article class="method-card">
+                <span class="method-number">03</span>
+                <h3>Check the source</h3>
+                <p>Every explanation links to official Swiss federal guidance you can read yourself.</p>
+              </article>
+            </div>
+          </section>
+
+          <aside class="source-strip" aria-label="Content sources">
+            <span class="source-strip-label">Built around guidance from</span>
+            <span>MeteoSwiss</span>
+            <span>FOEN</span>
+            <span>FOPH</span>
+            <span>FOCP</span>
+            <span>Alertswiss</span>
+          </aside>
+        </section>
+
+        <section class="screen" id="screen-quiz" aria-labelledby="question-prompt" hidden>
+          <div class="quiz-shell">
+            <div class="quiz-topbar">
+              <button class="back-button" id="quiz-back" type="button">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10H5M9 5l-5 5 5 5" /></svg>
+                All scenarios
+              </button>
+              <div class="quiz-position">
+                <span class="scenario-dot" id="quiz-scenario-dot" aria-hidden="true"></span>
+                <span id="quiz-scenario-name">Flooding</span>
+                <span class="position-divider" aria-hidden="true"></span>
+                <span id="quiz-question-position">Question 1 of 3</span>
+              </div>
+              <div class="score-pill" aria-label="Current score">
+                <span>Score</span>
+                <strong id="quiz-score">0</strong>
+              </div>
+            </div>
+
+            <div class="progress-rail" aria-hidden="true">
+              <span class="progress-fill" id="quiz-progress"></span>
+            </div>
+
+            <div class="quiz-grid">
+              <aside class="scenario-brief" id="scenario-brief" aria-labelledby="brief-title">
+                <div class="brief-icon" id="brief-icon" aria-hidden="true"></div>
+                <p class="eyebrow">Your scenario</p>
+                <h2 id="brief-title">Flooding</h2>
+                <p class="brief-summary" id="brief-summary"></p>
+
+                <div class="situation-card">
+                  <p class="situation-label">The situation</p>
+                  <p id="brief-setting"></p>
+                </div>
+
+                <div class="field-note">
+                  <span class="field-note-label">Field note</span>
+                  <p id="brief-note"></p>
+                </div>
+              </aside>
+
+              <section class="question-panel">
+                <p class="eyebrow" id="question-kicker">Decision 01</p>
+                <h1 id="question-prompt" tabindex="-1">Loading question…</h1>
+                <p class="question-help">Choose the safest action, then check your answer.</p>
+
+                <form id="answer-form" novalidate>
+                  <fieldset class="answer-fieldset">
+                    <legend class="sr-only">Choose one answer</legend>
+                    <div class="answer-list" id="answer-list"></div>
+                  </fieldset>
+
+                  <div class="answer-footer">
+                    <p class="answer-hint" id="answer-hint">Select an answer to continue.</p>
+                    <button class="button button--primary" id="check-button" type="submit" disabled>
+                      Check answer
+                    </button>
+                  </div>
+                </form>
+
+                <section class="feedback" id="feedback" aria-live="polite" tabindex="-1" hidden>
+                  <div class="feedback-heading">
+                    <span class="feedback-symbol" id="feedback-symbol" aria-hidden="true"></span>
+                    <div>
+                      <p class="feedback-verdict" id="feedback-verdict">Correct</p>
+                      <p class="feedback-lead" id="feedback-lead"></p>
+                    </div>
+                  </div>
+                  <p class="feedback-explanation" id="feedback-explanation"></p>
+                  <div class="feedback-sources" id="feedback-sources"></div>
+                  <div class="feedback-footer">
+                    <span class="feedback-score" id="feedback-score"></span>
+                    <button class="button button--ink" id="next-button" type="button">
+                      Next decision
+                      <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M4 10h11M11 5l5 5-5 5" />
+                      </svg>
+                    </button>
+                  </div>
+                </section>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-result" aria-labelledby="result-title" hidden>
+          <div class="result-shell">
+            <div class="result-head">
+              <div class="result-copy">
+                <p class="eyebrow" id="result-eyebrow">Scenario complete</p>
+                <h1 id="result-title" tabindex="-1">You read the warning signs.</h1>
+                <p class="result-message" id="result-message"></p>
+              </div>
+              <div class="score-orbit" id="score-orbit" aria-label="Final score">
+                <div class="score-orbit-inner">
+                  <strong id="result-score">0</strong>
+                  <span>/ <span id="result-total">3</span> correct</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="result-grid">
+              <section class="review-panel" aria-labelledby="review-title">
+                <div class="panel-heading">
+                  <h2 id="review-title">Your decisions</h2>
+                  <span id="review-subtitle" class="panel-meta"></span>
+                </div>
+                <ol class="review-list" id="review-list"></ol>
+              </section>
+
+              <aside class="takeaway-panel" aria-labelledby="takeaway-title">
+                <p class="eyebrow">Take this with you</p>
+                <h2 id="takeaway-title">The short version</h2>
+                <ul class="takeaway-list" id="takeaway-list"></ul>
+                <div class="takeaway-source" id="takeaway-source"></div>
+              </aside>
+            </div>
+
+            <div class="result-actions">
+              <button class="button button--primary" id="retry-button" type="button">
+                Try this scenario again
+              </button>
+              <button class="button button--ghost" id="another-button" type="button">
+                Choose another scenario
+              </button>
+            </div>
+
+            <div class="next-scenario" id="next-scenario" hidden>
+              <div class="next-scenario-copy">
+                <p class="eyebrow">Next up</p>
+                <h2 id="next-scenario-title">Heatwaves</h2>
+                <p id="next-scenario-summary"></p>
+              </div>
+              <button class="button button--ink" id="next-scenario-button" type="button">
+                Start next scenario
+                <svg class="button-icon" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M4 10h11M11 5l5 5-5 5" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <span class="footer-mark" aria-hidden="true">
+              <svg viewBox="0 0 40 40" role="presentation">
+                <path d="M11 25.5h17.5a5.5 5.5 0 0 0 .8-10.9A9.2 9.2 0 0 0 12.2 17 4.3 4.3 0 0 0 11 25.5Z" />
+                <path class="brand-bolt" d="m21 22-4.5 6h3.7L18.8 34l6.2-7.8h-3.9l1.8-4.2Z" />
+              </svg>
+            </span>
+            <p>
+              A learning prototype about extreme weather safety in Switzerland. Not a live warning
+              service.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="https://www.meteoswiss.admin.ch/weather.html" target="_blank" rel="noreferrer">MeteoSwiss</a>
+            <a href="https://www.babs.admin.ch/en/alertswiss-en" target="_blank" rel="noreferrer">Alertswiss</a>
+            <a href="https://www.bag.admin.ch/en/heat" target="_blank" rel="noreferrer">FOPH heat advice</a>
+            <a href="https://www.bafu.admin.ch/en/flooding" target="_blank" rel="noreferrer">FOEN flooding</a>
+          </div>
+        </div>
+        <div class="footer-base">
+          <span>In an emergency, call <strong>112</strong>.</span>
+          <span>Check current warnings before you travel.</span>
+        </div>
+      </footer>
+    </div>
+
+    <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">About this prototype</p>
+          <h2 id="about-title">Practice, not predictions.</h2>
+        </div>
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Close dialog">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" /></svg>
+        </button>
+      </div>
+      <p class="dialog-lede">
+        Weatherwise is a short educational quiz for students in Switzerland. It uses three common
+        weather emergencies to practise safer decisions. It does not issue warnings and cannot tell
+        you what is happening outside right now.
+      </p>
+      <div class="dialog-grid">
+        <div>
+          <h3>For current information</h3>
+          <p>
+            Check MeteoSwiss for weather warnings and Alertswiss for official alerts and instructions
+            from the authorities.
+          </p>
+        </div>
+        <div>
+          <h3>If someone is in danger</h3>
+          <p>
+            Call <strong>112</strong>. The fire service is <strong>118</strong> and an ambulance is
+            <strong>144</strong>. Follow the instructions of the emergency services.
+          </p>
+        </div>
+      </div>
+      <div class="dialog-source-block">
+        <h3>Official guidance used for this prototype</h3>
+        <ul class="dialog-sources" id="dialog-sources"></ul>
+      </div>
+      <p class="dialog-note" id="dialog-review-note"></p>
+      <div class="dialog-footer">
+        <span>Learning prototype · 2026</span>
+        <button class="button button--ink" id="dialog-done" type="button">Back to the quiz</button>
+      </div>
+    </dialog>
+
+    <div class="load-error" id="load-error" role="alert" hidden>
+      <strong>The quiz content could not be loaded.</strong>
+      <p>
+        Open this prototype through the local server, not as a file. Run
+        <code>node dev-server.mjs</code> in the project folder, then open
+        <code>http://127.0.0.1:4173</code>.
+      </p>
+    </div>
+
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>

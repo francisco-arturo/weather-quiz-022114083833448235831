@@ -1,0 +1,27 @@
+{
+  "prototype": "weather-quiz-022114083833448235831",
+  "purpose": "Mobile-friendly educational quiz about extreme weather safety in Switzerland: flooding, heatwaves and severe thunderstorms, with scenario questions, answer feedback, official guidance links and score summaries.",
+  "created": "2026-10-24",
+  "last_updated": "2026-10-24",
+  "conventions": {
+    "status_values": ["todo", "in_progress", "blocked", "done"],
+    "verification": ".\\init.ps1 (Windows) / ./init.sh (bash)",
+    "one_feature_at_a_time": true
+  },
+  "features": [
+    {
+      "id": "proto-001",
+      "name": "Complete three-scenario extreme weather quiz",
+      "description": "Home page with flooding, heatwaves and severe thunderstorms; three multiple-choice questions per scenario; answer feedback with explanations and official Swiss guidance links; live score; final score and decision review; retry and choose-another paths; editable JSON content; responsive and keyboard-accessible interface.",
+      "status": "done",
+      "dependencies": [],
+      "evidence": "2026-10-24: `powershell -ExecutionPolicy Bypass -File .\\init.ps1` exited 0. Content check: 3 scenarios, 9 questions, 15 official source links, 10 required files present. Unit tests: 8 passed, 0 failed. Local HTTP check on http://127.0.0.1:4174 returned 200 for /, /styles.css, /app.mjs, /quiz-core.mjs, /content/quiz-content.json and /favicon.svg with the expected content types.",
+      "done_criteria": [
+        "All three scenarios, nine questions, feedback, scoring, summary, retry and scenario switching implemented",
+        "Editable JSON content with validation and official guidance links",
+        "Responsive and keyboard-accessible interface",
+        "Verification run and recorded in progress.md"
+      ]
+    }
+  ]
+}

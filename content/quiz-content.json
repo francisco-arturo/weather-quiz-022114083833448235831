@@ -1,0 +1,399 @@
+{
+  "meta": {
+    "title": "Weatherwise",
+    "subtitle": "Extreme weather safety, Switzerland",
+    "intro": "Three weather emergencies. Nine decisions. A short, practical quiz for students in Switzerland.",
+    "version": "1.0.0",
+    "updated": "2026-10-24",
+    "language": "en",
+    "region": "Switzerland",
+    "emergency": {
+      "number": "112",
+      "label": "Emergency services",
+      "note": "In Switzerland, 112 reaches the emergency services. For the fire service call 118; for an ambulance call 144."
+    },
+    "disclaimer": "This is a learning prototype, not a live warning service. For current warnings, check Alertswiss and MeteoSwiss. In an emergency, call 112.",
+    "reviewStatus": "Draft educational content for a student prototype. It has not been reviewed by a Swiss authority.",
+    "officialSources": [
+      {
+        "label": "MeteoSwiss: Weather",
+        "url": "https://www.meteoswiss.admin.ch/weather.html"
+      },
+      {
+        "label": "FOEN: Flooding",
+        "url": "https://www.bafu.admin.ch/en/flooding"
+      },
+      {
+        "label": "FOPH: Protecting yourself and others in hot weather",
+        "url": "https://www.bag.admin.ch/en/heat"
+      },
+      {
+        "label": "FOCP: Issuing natural danger warnings",
+        "url": "https://www.babs.admin.ch/en/issuing-natural-danger-warnings-to-the-public"
+      },
+      {
+        "label": "Alertswiss: Alerts and warnings",
+        "url": "https://www.babs.admin.ch/en/alertswiss-en"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "flooding",
+      "number": "01",
+      "title": "Flooding",
+      "kicker": "Rising water",
+      "icon": "flood",
+      "duration": "2 min",
+      "summary": "Heavy rain can turn a stream, underpass or street into a fast-moving hazard in minutes. Learn where to go and what never to enter.",
+      "setting": "It has rained hard all afternoon. On your walk home, the stream beside the path is higher, faster and brown.",
+      "fieldNote": "Just 30 cm of moving water can knock an adult off balance. 50 cm can sweep away a car.",
+      "takeaways": [
+        "Move to higher ground and away from the water.",
+        "Never walk or drive through floodwater.",
+        "Keep out of flooded basements and call 118."
+      ],
+      "questions": [
+        {
+          "id": "flood-1",
+          "shortLabel": "A stream rises fast",
+          "prompt": "The stream beside your path is rising and turning brown. What is the safest next move?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Cross quickly at the usual stepping stones."
+            },
+            {
+              "id": "b",
+              "text": "Move to higher ground and away from the water."
+            },
+            {
+              "id": "c",
+              "text": "Stand on the bank and film the surge."
+            },
+            {
+              "id": "d",
+              "text": "Wait under the nearby road bridge."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Brown, fast water can carry debris and arrive as a flash flood. Move uphill and away from streams, underpasses and low-lying paths. Do not try to cross. Warn others and call 112 if someone is in danger.",
+          "sources": [
+            {
+              "label": "FOEN: Flooding",
+              "url": "https://www.bafu.admin.ch/en/flooding"
+            },
+            {
+              "label": "FOCP: Natural danger warnings",
+              "url": "https://www.babs.admin.ch/en/issuing-natural-danger-warnings-to-the-public"
+            }
+          ]
+        },
+        {
+          "id": "flood-2",
+          "shortLabel": "Water enters the basement",
+          "prompt": "Water starts coming into your building's basement. The lights are still on. What should you do?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Wade in and switch off the main power."
+            },
+            {
+              "id": "b",
+              "text": "Stay out, keep others out and call the fire service on 118."
+            },
+            {
+              "id": "c",
+              "text": "Open the basement windows to let the water out."
+            },
+            {
+              "id": "d",
+              "text": "Use an extension lead to move the freezer upstairs."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Floodwater can be electrically live and may hide open drains or sharp debris. Do not enter. Keep everyone out, call 118 and follow the emergency services' instructions. Only switch off power if you can do it from a dry, safe place.",
+          "sources": [
+            {
+              "label": "FOCP: Natural danger warnings",
+              "url": "https://www.babs.admin.ch/en/issuing-natural-danger-warnings-to-the-public"
+            },
+            {
+              "label": "Alertswiss: Alerts and warnings",
+              "url": "https://www.babs.admin.ch/en/alertswiss-en"
+            }
+          ]
+        },
+        {
+          "id": "flood-3",
+          "shortLabel": "A flooded road",
+          "prompt": "You are driving and the road ahead disappears under floodwater. What is the safest choice?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Drive through slowly in first gear."
+            },
+            {
+              "id": "b",
+              "text": "Follow the car in front through the water."
+            },
+            {
+              "id": "c",
+              "text": "Turn around and find a higher route."
+            },
+            {
+              "id": "d",
+              "text": "Walk ahead to check the depth."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "You cannot judge the depth or current from the driver's seat. Moving water can lift and sweep away a car, and hidden debris can damage it. Turn around, never drive into floodwater, and call 112 if someone is trapped.",
+          "sources": [
+            {
+              "label": "FOEN: Flooding",
+              "url": "https://www.bafu.admin.ch/en/flooding"
+            },
+            {
+              "label": "Alertswiss: Alerts and warnings",
+              "url": "https://www.babs.admin.ch/en/alertswiss-en"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heatwaves",
+      "number": "02",
+      "title": "Heatwaves",
+      "kicker": "Hot days",
+      "icon": "heat",
+      "duration": "2 min",
+      "summary": "Heat can do more than make you uncomfortable. Learn how to keep your body cool and how to spot someone who needs help.",
+      "setting": "It is 35°C and the third hot day in a row. Your flat has no air conditioning, and your neighbour lives alone.",
+      "fieldNote": "Heatstroke is an emergency. Call 144 if someone is confused, collapses or has a high temperature.",
+      "takeaways": [
+        "Ventilate when the outside air is cooler.",
+        "Drink water regularly, before you feel thirsty.",
+        "Check on people who live alone or are at higher risk."
+      ],
+      "questions": [
+        {
+          "id": "heat-1",
+          "shortLabel": "When to open the windows",
+          "prompt": "It is a hot, sunny day. When should you open the windows?",
+          "options": [
+            {
+              "id": "a",
+              "text": "At midday, to create a draught."
+            },
+            {
+              "id": "b",
+              "text": "Early morning and late evening, when the outside air is cooler."
+            },
+            {
+              "id": "c",
+              "text": "All day, so the flat does not get stuffy."
+            },
+            {
+              "id": "d",
+              "text": "Only after sunset, for five minutes."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Keep windows and shutters closed during the hottest part of the day, then ventilate when the outside air is cooler, often early morning and late evening. Shade sunny windows and use fans only if they help without pulling in hot air.",
+          "sources": [
+            {
+              "label": "FOPH: Protecting yourself and others in hot weather",
+              "url": "https://www.bag.admin.ch/en/heat"
+            }
+          ]
+        },
+        {
+          "id": "heat-2",
+          "shortLabel": "Staying hydrated",
+          "prompt": "You are studying outside on a hot afternoon. What is the best way to stay hydrated?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Wait until you feel thirsty, then drink a large bottle."
+            },
+            {
+              "id": "b",
+              "text": "Drink water regularly, before you feel thirsty."
+            },
+            {
+              "id": "c",
+              "text": "Replace water with coffee and energy drinks."
+            },
+            {
+              "id": "d",
+              "text": "Drink a beer to cool down."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Drink water regularly through the day, even before you feel thirsty. Avoid alcohol, which makes dehydration worse, and limit sugary or very caffeinated drinks. If you feel dizzy, sick or confused, get to a cool place and seek help.",
+          "sources": [
+            {
+              "label": "FOPH: Protecting yourself and others in hot weather",
+              "url": "https://www.bag.admin.ch/en/heat"
+            }
+          ]
+        },
+        {
+          "id": "heat-3",
+          "shortLabel": "Checking on a neighbour",
+          "prompt": "On the third hot day, your older neighbour does not answer the door. What should you do?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Assume they are out and try again tomorrow."
+            },
+            {
+              "id": "b",
+              "text": "Check on them now, call them and get help if they seem unwell."
+            },
+            {
+              "id": "c",
+              "text": "Leave a note and wait for the evening."
+            },
+            {
+              "id": "d",
+              "text": "Assume the heat is not serious and carry on."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Older people living alone are at higher risk during heatwaves. Check on them at least twice a day. If they do not respond, try calling and ask a neighbour or building manager for help. If someone is confused, collapses or has a high temperature, call 144.",
+          "sources": [
+            {
+              "label": "FOPH: Protecting yourself and others in hot weather",
+              "url": "https://www.bag.admin.ch/en/heat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thunderstorms",
+      "number": "03",
+      "title": "Severe thunderstorms",
+      "kicker": "Thunder and hail",
+      "icon": "storm",
+      "duration": "2 min",
+      "summary": "Thunderstorms can bring lightning, hail, sudden wind and intense rain. Learn how to read the warning signs and choose shelter.",
+      "setting": "You are on a ridge above the tree line when the first thunder rolls. The sky is dark and the wind is picking up.",
+      "fieldNote": "If you can hear thunder, you are close enough to be at risk from lightning. Get inside a solid building or a car.",
+      "takeaways": [
+        "Leave ridges and exposed ground when thunder starts.",
+        "Stay at least 10 metres from downed power lines.",
+        "Slow down and use lights when driving in hail."
+      ],
+      "questions": [
+        {
+          "id": "storm-1",
+          "shortLabel": "Thunder on an exposed ridge",
+          "prompt": "You hear thunder while hiking on an exposed ridge. What should you do?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Shelter under the tallest tree."
+            },
+            {
+              "id": "b",
+              "text": "Lie flat on the ground and wait."
+            },
+            {
+              "id": "c",
+              "text": "Descend to lower ground and get inside a building or car."
+            },
+            {
+              "id": "d",
+              "text": "Keep moving fast along the ridge to finish the hike."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Lightning is more likely to strike high, exposed ground and tall isolated objects. Leave the ridge, avoid lone trees and metal fences, and get into a solid building or a metal-bodied car. Do not lie flat: it increases your exposure to ground current.",
+          "sources": [
+            {
+              "label": "MeteoSwiss: Weather",
+              "url": "https://www.meteoswiss.admin.ch/weather.html"
+            },
+            {
+              "label": "FOCP: Natural danger warnings",
+              "url": "https://www.babs.admin.ch/en/issuing-natural-danger-warnings-to-the-public"
+            }
+          ]
+        },
+        {
+          "id": "storm-2",
+          "shortLabel": "A downed power line",
+          "prompt": "A storm has brought down a power line across the pavement. What is the safest action?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Step over it carefully."
+            },
+            {
+              "id": "b",
+              "text": "Move at least 10 metres away, keep others back and call 118."
+            },
+            {
+              "id": "c",
+              "text": "Lift it with a wooden stick."
+            },
+            {
+              "id": "d",
+              "text": "Check whether it is live by touching it with a shoe."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A downed line may still be live, and the ground around it can carry current. Keep well clear, warn others and call 118. Do not touch the line or anything it is touching. If someone is injured, call 144 after you are safe.",
+          "sources": [
+            {
+              "label": "Alertswiss: Alerts and warnings",
+              "url": "https://www.babs.admin.ch/en/alertswiss-en"
+            },
+            {
+              "label": "FOCP: Natural danger warnings",
+              "url": "https://www.babs.admin.ch/en/issuing-natural-danger-warnings-to-the-public"
+            }
+          ]
+        },
+        {
+          "id": "storm-3",
+          "shortLabel": "Driving into hail",
+          "prompt": "You are driving when hail starts and visibility drops. What should you do?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Stop under the nearest bridge, even if it blocks traffic."
+            },
+            {
+              "id": "b",
+              "text": "Slow down, switch on your lights and keep a safe distance."
+            },
+            {
+              "id": "c",
+              "text": "Speed up to get out of the storm."
+            },
+            {
+              "id": "d",
+              "text": "Follow the car ahead closely to use its lights."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Slow down, turn on your headlights and increase the gap to the car in front. If you need to stop, pull over somewhere safe, away from trees and power lines. Avoid stopping under bridges or in underpasses: they can flood and block emergency access.",
+          "sources": [
+            {
+              "label": "MeteoSwiss: Weather",
+              "url": "https://www.meteoswiss.admin.ch/weather.html"
+            },
+            {
+              "label": "Alertswiss: Alerts and warnings",
+              "url": "https://www.babs.admin.ch/en/alertswiss-en"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
