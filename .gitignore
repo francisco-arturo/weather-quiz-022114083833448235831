@@ -7,3 +7,12 @@ dist/
 *.log
 .DS_Store
 Thumbs.db
+
+# Internal harness docs: kept local, not published
+/AGENTS.md
+/feature_list.json
+/progress.md
+/session-handoff.md
+/DEMO.md
+/init.ps1
+/init.sh
